@@ -1,0 +1,19 @@
+<script type=module>
+import { bg,show } from "https://js.sabae.cc/egadv.js";
+await bg(3056);
+
+const a = await show("ここはどこでしょう?",["長野","富山","福井"]);
+if (a=="富山"){
+  await show("正解");
+}else if (a=="長野" ||a=="福井"){
+  await show("ハズレ");
+}
+
+for (;;){
+  if (await show("移動しますか?",["はい","いいえ"])=="はい"){
+    break;
+  }
+  await show("えー次行こうよ");
+}
+
+</script>
